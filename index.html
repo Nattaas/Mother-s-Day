@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mother's Day Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handlee&display=swap">
+    <script>
+        function openCard() {
+            document.querySelector('.card').classList.add('open');
+            var audio = document.getElementById('mothersDayMusic'); 
+            audio.volume = 0.4;
+            audio.play();
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="card">
+        <div class="card-front">
+            <img src="sunset.jpg" alt="Mother's Day Front Image">
+            <h1>Happy Mother's Day!</h1>
+            <button onclick="openCard()">Open Card</button>
+        </div>
+        <div class="card-inside">
+            <img class="flowers" src="cosmos.jpg" alt="Mother's Day Inside Image">
+            <div class="text">
+                <h2>To Mamma,</h2>
+                <p>We are like flowers that are raised with love by you. You helped us grow up big and strong, thank for all you do. Love you alot!</p>
+                <p>With all our love,</p>
+                <p>Demasha & Natalie</p>
+            </div>
+        </div>
+    </div>
+    <audio id="mothersDayMusic" src="Bob Marley - Is This Love.mp3" loop></audio>
+
+</body>
+</html>
